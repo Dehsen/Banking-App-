@@ -30,11 +30,12 @@ pin: 4444
 
 
 Within the app you can:
+
 Login as one of 4 users
 View your current balance
 View a list of each deposit & withdrawal history
 View the total money that has gone out of your account, as well as the total amount that has come in.
 Check how much interest you have gained.
 Transfer money to any of the other 3 accounts that you are currently not logged in as.
-Request a loan
+Request a loan (max you can loan is 10x the amount of your largest deposit)
 Close out the account that you are currently logged in as

@@ -8,24 +8,24 @@ You can login to the app using one of these 4 accounts:
 
 Account1\
 user: js\
-pin: 1111\
+pin: 1111
 
 
 Account 2\
 user: jd\
-pin: 2222\
+pin: 2222
 
 
 
 Account 3\
 user: stw\
-pin: 3333\
+pin: 3333
 
 
 
 Account 4\
 user: ss\
-pin: 4444\
+pin: 4444
 
 
 

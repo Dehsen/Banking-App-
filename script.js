@@ -85,15 +85,10 @@ const formatMovementDate = function (date, locale) {
   const calcDaysPassed = (date1, date2) => Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
   const daysPassed = calcDaysPassed(new Date(), date);
-  // console.log(daysPassed);
   if (daysPassed === 0) return `Today`;
   if (daysPassed === 1) return `Yesterday`;
   if (daysPassed <= 7) return `${daysPassed} days ago`;
 
-  // const day = `${date.getDate()}`.padStart(2, 0);
-  // const month = `${date.getMonth() + 1}`.padStart(2, 0);
-  // const year = date.getFullYear();
-  // return `${day}/${month}/${year}`;
   return new Intl.DateTimeFormat(locale).format(date);
 
 }
@@ -208,20 +203,11 @@ const startLogOutTimer = function () {
   tick();
   const timer = setInterval(tick, 1000)
   return timer;
-  // 
 }
 
 ///////////////////////////////////////
 // Event handlers
 let currentAccount, timer;
-
-// FAKE ALWAYS LOGGED IN
-// currentAccount = account1;
-// updateUI(currentAccount);
-// containerApp.style.opacity = 1;
-
-
-
 
 
 
@@ -368,19 +354,3 @@ btnSort.addEventListener('click', function (e) {
 });
 
 
-const items = ['nails', 'screws']
-const hardwareTimer = setTimeout((ing1, ing2) => {
-  console.log(`Here is your order of ${ing1} and ${ing2}`);
-}, 3000, ...items);
-
-console.log("Waiting...");
-
-if (items.includes('nails')) clearTimeout(hardwareTimer)
-
-
-// setInterval(()=> {
-//   const now = new Date();
-//   console.log(now);
-// }, 1000)
-// 
-// 

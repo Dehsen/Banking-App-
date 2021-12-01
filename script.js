@@ -1,9 +1,7 @@
 'use strict';
 
 /////////////////////////////////////////////////
-/////////////////////////////////////////////////
 // BANKIST APP
-
 /////////////////////////////////////////////////
 // Data
 
@@ -103,7 +101,7 @@ const formatCur = function (value, locale, currency) {
 
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
-  // console.log(acc.movements);
+
 
   const movs = sort ? acc.movements.slice().sort((a, b) => a - b) : acc.movements;
 
@@ -148,7 +146,6 @@ const calcDisplaySummary = function (acc) {
     .filter(mov => mov > 0)
     .map(deposit => (deposit * acc.interestRate) / 100)
     .filter((int, i, arr) => {
-      // console.log(arr);
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
@@ -239,15 +236,9 @@ btnLogin.addEventListener('click', function (e) {
       year: 'numeric',
     }
 
-    // const locale = navigator.language;
-    // console.log(locale);
+    
     labelDate.textContent = new Intl.DateTimeFormat(currentAccount.locale, options).format(now)
-    // const day = `${now.getDate()}`.padStart(2, 0);
-    // const month = `${now.getMonth() + 1}`.padStart(2, 0);
-    // const year = now.getFullYear();
-    // const hour = `${now.getHours()}`.padStart(2, 0);
-    // const min = `${now.getMinutes()}`.padStart(2, 0);
-    // labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+ 
 
 
     // Clear input fields
